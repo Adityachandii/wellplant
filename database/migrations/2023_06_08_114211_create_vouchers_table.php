@@ -15,8 +15,10 @@ class CreateVouchersTable extends Migration
     {
         Schema::create('vouchers', function (Blueprint $table) {
             $table->id();
-            $table->string('jenis_voucher');
-            $table->string('image_voucher');
+            $table->string('title');
+            $table->string('description');
+            $table->string('type');
+            // $table->string('image');
             $table->timestamps();
         });
     }

@@ -18,6 +18,9 @@ class CreateInfoplantsTable extends Migration
             $table->string('name');
             $table->string('image');
             $table->string('description');
+            $table->integer('watered');
+            $table->integer('fertilizered');
+            $table->foreignId('userId')->constrained('buyers', 'id');
             $table->timestamps();
         });
     }

@@ -19,8 +19,7 @@ class CreateSellersTable extends Migration
             $table->string('address');
             $table->string('gender');
             $table->string('email')->unique();
-            $table->string('password');
-            $table->string('confirmpassword');
+            $table->string('password', 60);
             $table->timestamps();
         });
     }

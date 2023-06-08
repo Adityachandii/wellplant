@@ -20,6 +20,7 @@ class CreateProductsTable extends Migration
             $table->string('description');
             $table->string('price');
             $table->string('stock');
+            $table->foreignId('userId')->constrained('sellers', 'id');
             $table->timestamps();
         });
     }

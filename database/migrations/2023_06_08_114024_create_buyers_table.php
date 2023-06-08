@@ -17,10 +17,9 @@ class CreateBuyersTable extends Migration
             $table->id();
             $table->string('username');
             $table->string('address');
-            $table->string('gender');
+            $table->dateTime('dob');
             $table->string('email')->unique();
-            $table->string('password');
-            $table->string('confirmpassword');
+            $table->string('password', 60);
             $table->timestamps();
         });
     }
