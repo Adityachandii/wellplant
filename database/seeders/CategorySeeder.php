@@ -3,11 +3,12 @@
 namespace Database\Seeders;
 
 use App\Models\Buyer;
+use App\Models\Category;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
-class BuyerSeeder extends Seeder
+class CategorySeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -17,13 +18,9 @@ class BuyerSeeder extends Seeder
     public function run()
     {
         DB::beginTransaction();
-        Buyer::create([
-            'username' => 'Rafi Muhammad',
-            'address' => 'Jalan Soekarno Hatta No.15 Jombang, Ciputat 15414',
-            'dob' => '2002-01-19',
-            'email' => 'rafimuhammad80@gmail.com',
-            'password' => Hash::make('12345678'),
-        ]);
+        Category::create(['name' => 'Plants and Seeds']);
+        Category::create(['name' => "Vitamin and Plant's Needs"]);
+        Category::create(['name' => "Gardening Tools"]);
         DB::commit();
     }
 }

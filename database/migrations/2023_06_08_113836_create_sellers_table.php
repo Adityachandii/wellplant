@@ -17,7 +17,9 @@ class CreateSellersTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('address');
-            $table->string('gender');
+            $table->string('city');
+            $table->string('province');
+            $table->dateTime('dob');
             $table->string('email')->unique();
             $table->string('password', 60);
             $table->timestamps();

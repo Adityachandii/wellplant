@@ -5,13 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Seller extends Model
+class Category extends Model
 {
     use HasFactory;
 
     protected $guarded = ['id'];
 
+    public function subCategories() {
+        return $this->hasMany(SubCategory::class, 'id', 'categoryId');
+    }
+
     public function products() {
-        return $this->hasMany(Product::class, 'id', 'sellerId');
+        return $this->hasMany(Product::class, 'id', 'categoryId');
     }
 }

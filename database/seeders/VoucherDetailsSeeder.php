@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\Infoplant;
+use App\Models\VoucherDetails;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class InfoplantSeeder extends Seeder
+class VoucherDetailsSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,12 +16,10 @@ class InfoplantSeeder extends Seeder
     public function run()
     {
         DB::beginTransaction();
-        Infoplant::create([
-            'name' => 'California Yellow Poppy',
-            'watered' => 5,
-            'fertilizered' => 2,
-            'buyerId' => 1,
-            'productId' => 5
+        VoucherDetails::create([
+            'voucherId' => 1,
+            'discount' => 50,
+            'ongkir' => null,
         ]);
         DB::commit();
     }

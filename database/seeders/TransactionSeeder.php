@@ -2,7 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\Transaction;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class TransactionSeeder extends Seeder
 {
@@ -13,6 +15,12 @@ class TransactionSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::beginTransaction();
+        Transaction::create([
+            'totalPrice' => 55000,
+            'voucherId' => null,
+            'paymentMethodId' => 1
+        ]);
+        DB::commit();
     }
 }

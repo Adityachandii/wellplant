@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\Infoplant;
+use App\Models\PaymentMethod;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class InfoplantSeeder extends Seeder
+class PaymentMethodSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,13 +16,8 @@ class InfoplantSeeder extends Seeder
     public function run()
     {
         DB::beginTransaction();
-        Infoplant::create([
-            'name' => 'California Yellow Poppy',
-            'watered' => 5,
-            'fertilizered' => 2,
-            'buyerId' => 1,
-            'productId' => 5
-        ]);
+        PaymentMethod::create(['name' => 'COD']);
+        PaymentMethod::create(['name' => 'Bank Transfer']);
         DB::commit();
     }
 }

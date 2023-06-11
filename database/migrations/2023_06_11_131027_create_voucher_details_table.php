@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTransactionsTable extends Migration
+class CreateVoucherDetailsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateTransactionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('transactions', function (Blueprint $table) {
+        Schema::create('voucher_details', function (Blueprint $table) {
             $table->id();
-            $table->integer('totalPrice');
-            $table->foreignId('voucherId')->nullable()->constrained('vouchers', 'id');
-            $table->foreignId('paymentMethodId')->constrained('payment_methods', 'id');
+            $table->foreignId('voucherId')->constrained('vouchers', 'id');
+            $table->integer('discount')->nullable();
+            $table->integer('ongkir')->nullable();
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateTransactionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('transactions');
+        Schema::dropIfExists('voucher_details');
     }
 }

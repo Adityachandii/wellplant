@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Voucher extends Model
+class PaymentMethod extends Model
 {
     use HasFactory;
 
     protected $guarded = ['id'];
 
-    public function voucherDetail() {
-        return $this->hasMany(VoucherDetails::class, 'id', 'voucherId');
+    public function transactions() {
+        return $this->hasMany(Transaction::class, 'id', 'paymentMethodId');
     }
 }

@@ -16,11 +16,10 @@ class CreateInfoplantsTable extends Migration
         Schema::create('infoplants', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('image');
-            $table->string('description');
             $table->integer('watered');
             $table->integer('fertilizered');
-            $table->foreignId('userId')->constrained('buyers', 'id');
+            $table->foreignId('buyerId')->constrained('buyers', 'id');
+            $table->foreignId('productId')->constrained('products', 'id')->nullable();
             $table->timestamps();
         });
     }
