@@ -38,17 +38,17 @@
       <div class="container mt-4" id="">
         <h1 class="text-center mb-3">Well Plant Features</h1>
         <div class="row">
-          <div class="col p-3 mr-3" style="background-color: #F0FFD7">
+          <div class="col p-3 mr-3 rounded" style="background-color: #F0FFD7">
             <i class="material-icons">info</i>
             <h4>Information</h4>
             <p>We provide plant information from understanding, origin, how to care for it and the location of the plant shop that sells it</p>
           </div>
-          <div class="col p-3 mr-3" style="background-color: #F0FFD7">
+          <div class="col p-3 mr-3 rounded" style="background-color: #F0FFD7">
             <i class="material-icons">schedule</i>
             <h4>Reminder</h4>
             <p>We have a reminder tab which functions to water and fertilize the plants added by the user</p>
           </div>
-          <div class="col p-3" style="background-color: #F0FFD7">
+          <div class="col p-3 rounded" style="background-color: #F0FFD7">
             <i class="material-icons">paid</i>
             <h4>Transaction</h4>
             <p>We connect sellers and buyers to make transactions easier in our application</p>
@@ -58,6 +58,6 @@
     </div>
 @endsection
 
-@section('footer')
+{{-- @section('footer')
   @include('components.footer')
-@endsection
+@endsection --}}
