@@ -30,10 +30,6 @@ class SubCategorySeeder extends Seeder
             'categoryId' => 1,
         ]);
         SubCategory::create([
-            'name' => 'Seeds',
-            'categoryId' => 1,
-        ]);
-        SubCategory::create([
             'name' => 'Organic',
             'categoryId' => 2,
         ]);

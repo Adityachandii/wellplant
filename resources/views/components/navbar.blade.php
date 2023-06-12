@@ -1,18 +1,61 @@
-@section('more-css')
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200" />
-@endsection
+<style>
+  .register, .dark-nav {
+    padding: 0.8rem; 
+  }
+  .register {
+    background-color: #F4F0E3;
+  }
+  .dark-nav:hover {
+    background-color: #3b5001;
+  }
+  .register:hover {
+    background-color: #c1bdb3
+  }
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200" />
 
 <nav class="d-flex align-items-center py-2" style="background-color: #1F2A01;">
   @if (!Session::has('loginId'))
     <div class="ml-5">
       <img class="mr-2" src="{{ asset('assets/logo/desktop_logo_light.png') }}" alt="logo well plant" width="150">
-      <a class="ml-4" href="#" style="text-decoration: none; color: #F4F0E3;">Home</a>
-      <a class="ml-4" href="#" style="text-decoration: none; color: #F4F0E3;">About Us</a>
+      <a class="dark-nav ml-2 rounded" 
+        href="
+          @if (!Session::has('loginId'))
+            {{ route('home') }}
+          @else
+            {{ route('index') }}
+          @endif
+        "
+        style="
+          @if (@$routeName != 'index' && @$routeName != 'home')
+            text-decoration: none;
+          @else
+            text-decoration: underline;
+          @endif
+          color: #F4F0E3;
+        "
+      >
+        Home
+      </a>
+      <a class="dark-nav ml-2 rounded" href="{{ route('about-us') }}" 
+        style="
+          @if (@$routeName != 'about-us')
+            text-decoration: none;
+          @else
+            text-decoration: underline;
+          @endif
+          color: #F4F0E3;
+        "
+      >
+        About Us
+      </a>
     </div>
     <div class="d-flex align-items-center ml-auto mr-5">
-      <a href="#" style="text-decoration: none; color: #F4F0E3;">Login</a>
-      <div class="ml-4 rounded" style="padding: 0.8rem; background-color: #F4F0E3;">
+      <div class="dark-nav rounded">
+        <a href="#" style="text-decoration: none; color: #F4F0E3;">Login</a>
+      </div>
+      <div class="register ml-4 rounded">
         <a href="#" style="text-decoration: none; color: #1F2A01">New Start</a>
       </div>
     </div>

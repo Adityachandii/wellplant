@@ -1,4 +1,4 @@
-<footer class="d-flex align-items-center justify-content-between p-3" style="color: white; background-color: #1F2A01">
+<footer class="d-flex align-items-center justify-content-between p-3" style="color: white; background-color: #1F2A01;">
   <div class="ml-5">
     <a class="mr-3" href="#" style="text-decoration: none; color: #F4F0E3;">Contact</a>
     <a class="mr-3" href="#" style="text-decoration: none; color: #F4F0E3;">Help</a>

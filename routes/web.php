@@ -14,4 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [IndexController::class, 'index']);
+Route::get('/', [IndexController::class, 'index'])->name('index');
+Route::get('/home', [IndexController::class, 'index'])->name('home');
+Route::get('/about-us', function() {
+    return view('about_us', ['routeName' => Route::currentRouteName()]);
+})->name('about-us');
