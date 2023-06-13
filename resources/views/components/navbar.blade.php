@@ -18,7 +18,15 @@
 <nav class="d-flex align-items-center py-2" style="background-color: #1F2A01;">
   @if (!Session::has('loginId'))
     <div class="ml-5">
-      <img class="mr-2" src="{{ asset('assets/logo/desktop_logo_light.png') }}" alt="logo well plant" width="150">
+      <a href="
+        @if (!Session::has('loginId'))
+          {{ route('home') }}
+        @else
+          {{ route('index') }}
+        @endif
+      ">
+        <img class="mr-2" src="{{ asset('assets/logo/desktop_logo_light.png') }}" alt="logo well plant" width="150">  
+      </a>
       <a class="dark-nav ml-2 rounded" 
         href="
           @if (!Session::has('loginId'))
@@ -70,7 +78,15 @@
     </div>
   @else
     <div class="ml-5 mr-2" style="flex: 1">
-      <img class="mr-2" src="{{ asset('assets/logo/desktop_logo_light.png') }}" alt="logo well plant" width="150">
+      <a href="
+        @if (!Session::has('loginId'))
+          {{ route('home') }}
+        @else
+          {{ route('index') }}
+        @endif
+      ">
+        <img class="mr-2" src="{{ asset('assets/logo/desktop_logo_light.png') }}" alt="logo well plant" width="150">
+      </a>
     </div>
     <div class="ml-auto mr-2" style="flex: 2">
       <form class="form-inline" action="" method="">

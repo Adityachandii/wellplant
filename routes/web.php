@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,9 +25,12 @@ Route::get('/login/buyer', function() {
 })->name('login.buyer');
 
 Route::post('/login', [LoginController::class, 'login']);
+Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::get('/', [IndexController::class, 'index'])->name('index');
 Route::get('/home', [IndexController::class, 'home'])->name('home');
+Route::get('/home/seller', [IndexController::class, 'home'])->name('seller.home');
 Route::get('/about-us', function() {
     return view('about_us', ['routeName' => Route::currentRouteName()]);
 })->name('about-us');
+Route::get('/product/{categoryId}', [ProductController::class, 'showByCategoryId'])->name('showByCategoryId');

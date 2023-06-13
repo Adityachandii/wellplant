@@ -63,7 +63,6 @@
         </div>
       @endforeach
     </div>
-    @include('components.footer')
 @endsection
 
 @section('more-components')

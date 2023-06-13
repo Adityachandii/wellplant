@@ -29,9 +29,16 @@ class LoginController extends Controller
             $request->session()->put('loginId', $user->id);
             $request->session()->regenerate();
 
-            return redirect()->intended('/home');
+            return ($request->user == 'buyer') ? redirect()->intended('/home') : redirect()->intended('/home/seller');
         }
         // dd('gagal');
         return back()->withErrors(['loginFailed' => 'Email or password is incorrect!']);
+    }
+
+    public function logout(Request $request) {
+        if ($request->session()->has('loginId')) {
+            $request->session()->pull('loginId');
+            return redirect()->intended('login');
+        }
     }
 }

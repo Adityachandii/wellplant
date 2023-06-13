@@ -29,8 +29,8 @@
 
 @section('main')
     <div class="row-1 container mt-5">
-      <a href="" style="text-decoration: none; color: #1E1E1E">
-        <div class="card p-4 mr-5">
+      <a class="card p-4 mr-5" href="" style="text-decoration: none; color: #1E1E1E">
+        <div class="">
           <h3 class="text-center">Plant Progress</h3>
           <div class="d-flex justify-content-between">
             <div class="text-center">
@@ -48,27 +48,27 @@
           </div>
         </div>
       </a>
-      <a href="" style="text-decoration: none; color: #1E1E1E">
-        <div class="card p-3">
+      <a class="card p-3" href="" style="text-decoration: none; color: #1E1E1E">
+        <div class="">
           <h1>Vouchers</h1>
         </div>
       </a>
     </div>
     <div class="row-2 container mt-5">
-        <a href="" style="text-decoration: none; color: #1E1E1E">
-          <div class="card">
+        <a class="card p-4 mr-4" href="{{ route('showByCategoryId', ['categoryId' => 1]) }}" style="text-decoration: none; color: #1E1E1E">
+          <div class="">
             <img src="" alt="">
             <h4>Plants and Seeds</h4>
           </div>
         </a>
-        <a href="" style="text-decoration: none; color: #1E1E1E">
-          <div class="card">
+        <a class="card p-4 mr-4" href="" style="text-decoration: none; color: #1E1E1E">
+          <div class="">
             <img src="" alt="">
             <h4>Vitamin and Plant's Needs</h4>
           </div>
         </a>
-        <a href="" style="text-decoration: none; color: #1E1E1E">
-          <div class="card">
+        <a class="card p-4" href="" style="text-decoration: none; color: #1E1E1E">
+          <div class="">
             <img src="" alt="">
             <h4>Gardening Tools</h4>
           </div>

@@ -35,7 +35,7 @@ class IndexController extends Controller
         // ]);
         $vouchers = Voucher::all();
 
-        return view('home', [
+        return view('buyer.home', [
             'plantProgress' => $plantProgress, 
             'totalPlant' => $totalPlant, 
             'totalWatering' => $totalWatering, 
