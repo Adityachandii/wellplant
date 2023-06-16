@@ -29,7 +29,7 @@
 
 @section('main')
     <div class="row-1 container mt-5">
-      <a class="card p-4 mr-5" href="" style="text-decoration: none; color: #1E1E1E">
+      <a class="card p-4 mr-5" href="{{ route('plantProgress') }}" style="text-decoration: none; color: #1E1E1E">
         <div class="">
           <h3 class="text-center">Plant Progress</h3>
           <div class="d-flex justify-content-between">
@@ -61,13 +61,13 @@
             <h4>Plants and Seeds</h4>
           </div>
         </a>
-        <a class="card p-4 mr-4" href="" style="text-decoration: none; color: #1E1E1E">
+        <a class="card p-4 mr-4" href="{{ route('showByCategoryId', ['categoryId' => 2]) }}" style="text-decoration: none; color: #1E1E1E">
           <div class="">
             <img src="" alt="">
             <h4>Vitamin and Plant's Needs</h4>
           </div>
         </a>
-        <a class="card p-4" href="" style="text-decoration: none; color: #1E1E1E">
+        <a class="card p-4" href="{{ route('showByCategoryId', ['categoryId' => 3]) }}" style="text-decoration: none; color: #1E1E1E">
           <div class="">
             <img src="" alt="">
             <h4>Gardening Tools</h4>
