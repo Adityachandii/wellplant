@@ -26,6 +26,7 @@ class DatabaseSeeder extends Seeder
         $paymentMethodSeeder = new PaymentMethodSeeder;
         $transactionSeeder = new TransactionSeeder;
         $transactionDetailSeeder = new TransactionDetailSeeder;
+        $reminderSeeder = new ReminderSeeder;
 
         $buyers->run();
         $sellers->run();
@@ -38,5 +39,6 @@ class DatabaseSeeder extends Seeder
         $paymentMethodSeeder->run();
         $transactionSeeder->run();
         $transactionDetailSeeder->run();
+        $reminderSeeder->run();
     }
 }

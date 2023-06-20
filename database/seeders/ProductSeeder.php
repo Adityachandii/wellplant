@@ -202,7 +202,7 @@ class ProductSeeder extends Seeder
             'soldQty' => 1,
             'takeCareDesc' => null,
             'categoryId' => 2,
-            'subCategoryId' => 1,
+            'subCategoryId' => 4,
             'sellerId' => 1,
         ]);
 
@@ -218,7 +218,7 @@ class ProductSeeder extends Seeder
             'soldQty' => 0,
             'takeCareDesc' => null,
             'categoryId' => 2,
-            'subCategoryId' => 2,
+            'subCategoryId' => 4,
             'sellerId' => 1,
         ]);
 
@@ -236,7 +236,7 @@ class ProductSeeder extends Seeder
             'soldQty' => 0,
             'takeCareDesc' => null,
             'categoryId' => 2,
-            'subCategoryId' => 1,
+            'subCategoryId' => 4,
             'sellerId' => 1,
         ]);
 
@@ -252,7 +252,7 @@ class ProductSeeder extends Seeder
             'soldQty' => 0,
             'takeCareDesc' => null,
             'categoryId' => 2,
-            'subCategoryId' => 1,
+            'subCategoryId' => 5,
             'sellerId' => 1,
         ]);
 
@@ -264,7 +264,7 @@ class ProductSeeder extends Seeder
             'soldQty' => 0,
             'takeCareDesc' => null,
             'categoryId' => 2,
-            'subCategoryId' => 1,
+            'subCategoryId' => 5,
             'sellerId' => 1,
         ]);
 
@@ -282,7 +282,7 @@ class ProductSeeder extends Seeder
             'soldQty' => 0,
             'takeCareDesc' => null,
             'categoryId' => 2,
-            'subCategoryId' => 2,
+            'subCategoryId' => 4,
             'sellerId' => 1,
         ]);
 
@@ -309,7 +309,7 @@ class ProductSeeder extends Seeder
             'soldQty' => 0,
             'takeCareDesc' => null,
             'categoryId' => 3,
-            'subCategoryId' => 1,
+            'subCategoryId' => 7,
             'sellerId' => 1,
         ]);
 
@@ -336,7 +336,7 @@ class ProductSeeder extends Seeder
             'soldQty' => 0,
             'takeCareDesc' => null,
             'categoryId' => 3,
-            'subCategoryId' => 1,
+            'subCategoryId' => 7,
             'sellerId' => 1,
         ]);
 
@@ -362,7 +362,7 @@ class ProductSeeder extends Seeder
             'soldQty' => 0,
             'takeCareDesc' => null,
             'categoryId' => 3,
-            'subCategoryId' => 1,
+            'subCategoryId' => 7,
             'sellerId' => 1,
         ]);
 
@@ -389,7 +389,7 @@ class ProductSeeder extends Seeder
             'soldQty' => 0,
             'takeCareDesc' => null,
             'categoryId' => 3,
-            'subCategoryId' => 1,
+            'subCategoryId' => 8,
             'sellerId' => 1,
         ]);
 
@@ -413,7 +413,7 @@ class ProductSeeder extends Seeder
             'soldQty' => 0,
             'takeCareDesc' => null,
             'categoryId' => 3,
-            'subCategoryId' => 2,
+            'subCategoryId' => 9,
             'sellerId' => 1,
         ]);
 
@@ -425,7 +425,7 @@ class ProductSeeder extends Seeder
             'soldQty' => 0,
             'takeCareDesc' => null,
             'categoryId' => 3,
-            'subCategoryId' => 3,
+            'subCategoryId' => 9,
             'sellerId' => 1,
         ]);
 

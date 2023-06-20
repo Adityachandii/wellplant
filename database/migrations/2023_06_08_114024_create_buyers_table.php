@@ -16,7 +16,11 @@ class CreateBuyersTable extends Migration
         Schema::create('buyers', function (Blueprint $table) {
             $table->id();
             $table->string('username');
+            $table->string('phone');
             $table->string('address');
+            $table->string('city');
+            $table->string('province');
+            $table->string('postcode');
             $table->dateTime('dob');
             $table->string('email')->unique();
             $table->string('password', 60);

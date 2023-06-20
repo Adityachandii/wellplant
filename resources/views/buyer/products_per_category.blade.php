@@ -34,8 +34,8 @@
 @endsection
 
 @section('main')
-  <div class="d-flex mt-5">
-    <div class="d-flex flex-column align-items-center mx-5 pr-5" style="border-width: 1px; border-right-style: solid; border-color: #1F2A01; width: 200px;">
+  <div class="container d-flex mt-5">
+    <div class="d-flex flex-column align-items-center mr-5 pr-5" style="border-width: 1px; border-right-style: solid; border-color: #1F2A01; width: 200px;">
       @foreach ($subCategories as $subCategory)
         <a href="{{ route('showByCategoryId', ['categoryId' => $subCategory->categoryId, 'subCategory' => $subCategory->id]) }}" class="" style="text-decoration: none; color: #1F2A01;">
           <div class="category mb-4 px-3 py-2 rounded" style="@if($subCategory->id == $activeSubCategory->id) color: white; background-color: #3b5001; @endif">
@@ -46,21 +46,23 @@
     </div>
     <div class="products">
       @foreach ($products as $product)
-        <div class="product">
-          <div class="product-img">
-            <img src="{{ asset('assets/categories/'.$product->categoryId.'/'.$product->subCategoryId.'/'.$product->id.'.png') }}" alt="{{ $product->name }}" style="width: 100%; height: 100%; object-fit: cover; border-top-left-radius: 25px; border-top-right-radius: 25px">
-          </div>
-          <div class="d-flex flex-column container pt-3">
-            <div style="flex-grow: 1">
-              <h5>{{ $product->name }}</h5>
-              <p>@currency($product->price)</p>
+        <a href="{{ route('product.detail', ['id' => $product->id]) }}" style="text-decoration: none; color: black;">
+          <div class="product">
+            <div class="product-img">
+              <img src="{{ asset('assets/categories/'.$product->categoryId.'/'.$product->subCategoryId.'/'.$product->id.'.png') }}" alt="{{ $product->name }}" style="width: 100%; height: 100%; object-fit: cover; border-top-left-radius: 25px; border-top-right-radius: 25px">
             </div>
-            <p class="d-flex align-items-center">
-              <i class="material-icons mr-2">location_on</i>
-              {{ $product->seller->city }}
-            </p>
+            <div class="d-flex flex-column container pt-3">
+              <div style="flex-grow: 1">
+                <h5>{{ $product->name }}</h5>
+                <p>@currency($product->price)</p>
+              </div>
+              <p class="d-flex align-items-center">
+                <i class="material-icons mr-2">location_on</i>
+                {{ $product->seller->city }}
+              </p>
+            </div>
           </div>
-        </div>
+        </a>
       @endforeach
     </div>
   </div>

@@ -22,13 +22,7 @@
         <img class="mr-2" src="{{ asset('assets/logo/desktop_logo_light.png') }}" alt="logo well plant" width="150">  
       </a>
       <a class="dark-nav ml-2 rounded" 
-        href="
-          @if (!Session::has('loginId'))
-            {{ route('home') }}
-          @else
-            {{ route('index') }}
-          @endif
-        "
+        href="{{ route('index') }}"
         style="
           @if (@$routeName != 'index' && @$routeName != 'home')
             text-decoration: none;
@@ -83,14 +77,14 @@
     </div>
     <div class="d-flex justify-content-end align-items-center ml-auto mr-5" style="flex: 1">
       <div class="mr-4">
-        <a class="text-center" href="#">
+        <a class="text-center" href="{{ route('notifications') }}">
           <span class="material-symbols-outlined" style="font-size: 30px;">
             notifications
           </span>
         </a>
       </div>
       <div class="mr-4">
-        <a class="text-center" href="#">
+        <a class="text-center" href="{{ route('cart') }}">
           <span class="material-symbols-outlined" style="font-size: 30px;">
             shopping_cart
           </span>
