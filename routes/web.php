@@ -6,6 +6,7 @@ use App\Http\Controllers\InfoplantController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\VoucherController;
 use App\Models\Infoplant;
 use Illuminate\Support\Facades\Route;
 
@@ -26,13 +27,15 @@ Route::middleware(['isLoggedIn'])->group(function() {
     Route::get('/home/seller', [IndexController::class, 'home'])->name('seller.home');
     Route::get('/product/detail/{id}', [ProductController::class, 'detailProduct'])->name('product.detail');
     Route::get('/product/{categoryId}/{subCategory?}', [ProductController::class, 'showByCategoryId'])->name('showByCategoryId');
-    Route::post('/buy', [InfoplantController::class, 'buyPlant'])->name('buyPlant');
+    Route::post('/buy', [InfoplantController::class, 'buyPlant']);
     Route::get('/plant-progress', [InfoplantController::class, 'plantProgress'])->name('plantProgress');
     Route::get('/add-plant/{id}', [InfoplantController::class, 'addPlant'])->name('addPlant');
     Route::get('/notifications', [NotificationController::class, 'index'])->name('notifications');
     Route::get('/cart', [CartController::class, 'index'])->name('cart');
-    Route::post('/delete-cart', [CartController::class, 'delete'])->name('delete');
+    Route::post('/delete-cart', [CartController::class, 'delete']);
     Route::get('/checkout', [CartController::class, 'checkout'])->name('checkout');
+    Route::post('/payment', [CartController::class, 'payment']); // ! Nanti pake
+    Route::post('/voucher', [VoucherController::class, 'use']);
 });
 
 Route::middleware(['isLoggedOut'])->group(function() {

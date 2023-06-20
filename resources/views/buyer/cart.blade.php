@@ -28,10 +28,11 @@
                   <h5>{{ $cart->product->name }}</h5>
                 </div>
                 <div class="d-flex align-items-center">
+                  <p id="{{ 'price-'.$cart->id }}" class="mr-3 mb-0">@currency($cart->total)</p>
                   <form action="/delete-cart" method="post">
                     @csrf
                     <input class="mr-3" type="hidden" name="cartId" id="cartId" value="{{ $cart->id }}">
-                    <input class="mr-3" type="number" name="quantity" id="quantity" value="{{ $cart->quantity }}" style="width: 50px;">
+                    <input id="{{ 'qty-'.$cart->id }}" class="mr-3" type="number" name="quantity" id="quantity" value="{{ $cart->quantity }}" style="width: 50px;">
                     <button type="submit" class="btn btn-danger">Delete</button>
                   </form>
                 </div>
@@ -46,6 +47,19 @@
 
 @section('more-js')
   <script>
+    let carts = {!! json_encode($carts, JSON_HEX_TAG) !!};
     
+    carts.forEach(cart => {
+      window['price' + cart.id] = document.getElementById('price-' + cart.id);
+      window['qty' + cart.id] = document.getElementById('qty-' + cart.id);
+      
+      window['qty' + cart.id].addEventListener('change', function() {
+        let newPrice = window['qty' + cart.id].value * cart.product.price;
+        window['price' + cart.id].innerText = new Intl.NumberFormat("id-ID", {
+          style: "currency",
+          currency: "IDR"
+        }).format(newPrice);
+      });
+    });
   </script>
 @endsection

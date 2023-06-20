@@ -18,7 +18,8 @@ class VoucherSeeder extends Seeder
         DB::beginTransaction();
         Voucher::create([
             'title' => 'Diskon 50%',
-            'description' => 'Diskon 50% untuk semua produk, dengan maksimum potongan 10rb.',
+            'description' => 'Diskon 50% untuk semua produk',
+            'code' => 'WELLPLANTHEMAT',
         ]);
         DB::commit();
     }

@@ -18,6 +18,7 @@ class CreateTransactionsTable extends Migration
             $table->integer('totalPrice');
             $table->foreignId('voucherId')->nullable()->constrained('vouchers', 'id');
             $table->foreignId('paymentMethodId')->constrained('payment_methods', 'id');
+            $table->foreignId('shippingMethodId')->constrained('shipping_methods', 'id');
             $table->timestamps();
         });
     }

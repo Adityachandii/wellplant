@@ -19,7 +19,8 @@ class TransactionSeeder extends Seeder
         Transaction::create([
             'totalPrice' => 55000,
             'voucherId' => null,
-            'paymentMethodId' => 1
+            'paymentMethodId' => 1,
+            'shippingMethodId' => 1
         ]);
         DB::commit();
     }

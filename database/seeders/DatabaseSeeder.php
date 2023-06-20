@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Product;
+use App\Models\ShippingMethod;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -19,7 +20,9 @@ class DatabaseSeeder extends Seeder
         $sellers = new SellerSeeder;
         $categories = new CategorySeeder;
         $subCategories = new SubCategorySeeder;
+        $shippingMethod = new ShippingMethodSeeder;
         $products = new ProductSeeder;
+        $cart = new CartSeeder;
         $infoPlants = new InfoplantSeeder;
         $voucherSeeder = new VoucherSeeder;
         $voucherDetailSeeder = new VoucherDetailsSeeder;
@@ -32,7 +35,9 @@ class DatabaseSeeder extends Seeder
         $sellers->run();
         $categories->run();
         $subCategories->run();
+        $shippingMethod->run();
         $products->run();
+        $cart->run();
         $infoPlants->run();
         $voucherSeeder->run();
         $voucherDetailSeeder->run();
